@@ -1,10 +1,6 @@
 <p align="center">
-<a href="https://github.com/metowolf/upimg-cli">
-<img src="https://user-images.githubusercontent.com/2666735/51110140-6eed7d00-1832-11e9-9162-3511162054a4.png" />
-</a>
+  <img width="600" src="upimg.svg">
 </p>
-
-<h1 align="center">upimg</h1>
 
 <p align="center">🧀 Upload image to public CDN in terminal</p>
 
@@ -17,16 +13,11 @@
 ***
 
 
-## Usage
-
 ### Installation
 
 ```bash
 npm install @upimg/cli -g
-```
-or
-```bash
-yarn global add @upimg/cli
+# yarn global add @upimg/cli
 ```
 
 ### Usage
@@ -50,3 +41,27 @@ Setting default CDN server
 ```bash
 $ upimg --config
 ```
+
+### Interface
+
+```bash
+λ upimg --help
+Usage: upimg [options]
+
+Options:
+  -V, --version          output the version number
+  -c, --config           Setting default CDN server & cookie
+  -s, --server [server]  Upload throuth a given CDN server
+  -h, --help             output usage information
+
+Examples:
+  upimg example.png
+  upimg --server jd example.png
+
+```
+
+### Related
+
+ - [metowolf/upimg](https://github.com/metowolf/UpImg) - Upload image to public CDN
+ - [sindresorhus/ora](https://github.com/sindresorhus/ora) - Elegant terminal spinner
+ - [join freebuf](https://job.freebuf.com/) - We want you!
