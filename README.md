@@ -16,8 +16,8 @@
 ### Installation
 
 ```bash
-npm install @upimg/cli -g
-# yarn global add @upimg/cli
+yarn global add @upimg/cli
+# npm install @upimg/cli -g
 ```
 
 ### Usage
