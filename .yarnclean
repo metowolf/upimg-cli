@@ -48,7 +48,9 @@ bower.json
 *.txt
 *.map
 *.html
-LICENSE
-license
+LICENSE*
+license*
 *.ts
+*.flow
+*.iml
 README*
