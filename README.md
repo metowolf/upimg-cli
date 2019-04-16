@@ -52,11 +52,13 @@ Options:
   -V, --version          output the version number
   -c, --config           Setting default CDN server & cookie
   -s, --server [server]  Upload throuth a given CDN server
+  -r, --raw              Raw output
   -h, --help             output usage information
 
 Examples:
   upimg example.png
   upimg --server jd example.png
+  upimg example.png --raw | clipcopy
 
 ```
 

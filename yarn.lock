@@ -678,10 +678,10 @@ tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
 
-upimg@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/upimg/-/upimg-0.2.2.tgz#d5f69ec6bebaa2007da0482616f9ac6367abc9d4"
-  integrity sha512-5lxBamcnnu1yyXAJbbqHi+vlUDfTl/DXtoJKrj9OBVYJniwPbcCeYJW50hKEhSrE0i4TBCpFkPIWmdBdhfProg==
+upimg@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/upimg/-/upimg-0.3.0.tgz#4ff867da980795e8d0c77a613df784dee947bd2a"
+  integrity sha512-3o5DUEicTXJTHGMr6AY2nyoYqpfbWIpxzP0ghRg95rDCjiZ4zGut3WeUeM6JlVUfVvZTzVKIPJLe9SU6aNtP/A==
   dependencies:
     file-type "^10.11.0"
     form-data "^2.3.3"
