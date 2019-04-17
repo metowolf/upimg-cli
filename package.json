@@ -1,6 +1,6 @@
 {
   "name": "@upimg/cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "🧀 Upload image to public CDN in terminal",
   "bin": {
     "upimg": "./lib/cli.js"
