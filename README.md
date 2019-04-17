@@ -64,6 +64,6 @@ Examples:
 
 ### Related
 
- - [metowolf/upimg](https://github.com/metowolf/UpImg) - Upload image to public CDN
+ - [metowolf/upimg](https://www.npmjs.com/package/upimg) - Upload image to public CDN
  - [sindresorhus/ora](https://github.com/sindresorhus/ora) - Elegant terminal spinner
- - [join freebuf](https://job.freebuf.com/) - We want you!
+ - [macOS Automator](https://github.com/metowolf/upimg-cli/wiki/macOS-%E4%B8%8B%E4%BD%BF%E7%94%A8-Automator-%E4%B8%8A%E4%BC%A0) - macOS 下使用 Automator 上传
