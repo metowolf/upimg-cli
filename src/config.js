@@ -1,16 +1,16 @@
-const upimg = require('upimg')
-const inquirer = require('inquirer')
-const chalk = require('chalk')
+import upimg from 'upimg'
+import inquirer from 'inquirer'
+import chalk from 'chalk'
+import Conf from 'conf'
 
-const Conf = require('conf')
 const conf = new Conf({
   configName: 'upimg',
-  projectName: 'upimg',
+  projectName: 'upimg'
 })
 
 const setServer = async () => {
-  let servers = Object.keys(upimg).filter(x => upimg[x].deprecated !== true)
-  let answer = await inquirer.prompt([
+  const servers = Object.keys(upimg).filter(x => upimg[x].deprecated !== true)
+  const answer = await inquirer.prompt([
     {
       type: 'list',
       name: 'server',
@@ -29,11 +29,10 @@ const setServer = async () => {
 }
 
 const setOptions = async server => {
+  const options = conf.get(`options-${server}`, {})
 
-  let options = conf.get(`options-${server}`, {})
-
-  let question = []
-  for (let keyname of Object.keys(upimg[server].options)) {
+  const question = []
+  for (const keyname of Object.keys(upimg[server].options)) {
     question.push({
       type: 'input',
       name: keyname,
@@ -42,13 +41,13 @@ const setOptions = async server => {
     })
   }
 
-  let answer = await inquirer.prompt(question)
+  const answer = await inquirer.prompt(question)
   conf.set(`options-${server}`, answer)
 
   return answer.cookie
 }
 
-module.exports = async () => {
-  let server = await setServer()
+export default async () => {
+  const server = await setServer()
   await setOptions(server)
 }

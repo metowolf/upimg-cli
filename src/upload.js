@@ -1,41 +1,42 @@
-const util = require('util')
-const glob = util.promisify(require('glob'))
-const upimg = require('upimg')
-const ora = require('ora')
-const chalk = require('chalk')
+import { promisify } from 'util'
+import glob from 'glob'
+import upimg from 'upimg'
+import ora from 'ora'
+import chalk from 'chalk'
+
+const pGlob = promisify(glob)
 
 const Conf = require('conf')
 const conf = new Conf({
   configName: 'upimg',
-  projectName: 'upimg',
+  projectName: 'upimg'
 })
 
 const parseGlob = async (files) => {
-  let result = []
-  for (let file of files) {
-    let t = await glob(file)
+  const result = []
+  for (const file of files) {
+    const t = await pGlob(file)
     result.push(...t)
   }
   return result
 }
 
-module.exports = async (commander) => {
+export default async (commander) => {
+  const files = await parseGlob(commander.args)
 
-  let files = await parseGlob(commander.args)
-
-  let server = commander.server || conf.get('server', 'alibaba')
+  const server = commander.server || conf.get('server', 'alibaba')
   let api = upimg[server]
 
-  let options = conf.get(`options-${server}`, {})
+  const options = conf.get(`options-${server}`, {})
 
-  for (let keyname of Object.keys(upimg[server].options)) {
+  for (const keyname of Object.keys(upimg[server].options)) {
     if (options[keyname] !== undefined) {
       api = api.set(keyname, options[keyname])
     }
   }
 
-  for (let file of files) {
-    let spinner = ora(`Uploading ${file}`)
+  for (const file of files) {
+    const spinner = ora(`Uploading ${file}`)
     if (!commander.raw) {
       spinner.start()
     }
