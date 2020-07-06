@@ -13,7 +13,7 @@ export default {
   ],
   plugins: [
     json(),
-    babel(),
+    babel({ babelHelpers: 'bundled' }),
     terser()
   ],
   external: [
